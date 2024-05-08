@@ -1,59 +1,67 @@
 import random
+
 while True:
-    Start=input("Vitej ve hre zadej start by zacit")
-    if Start == ("start"): 
-        print ("Hrac 1 hazi") 
-        print ("Kostka 1")
-        ksk1=(random.randint(1,6))
-        print (ksk1)
-        print ("Kostka 2")
-        ksk2=(random.randint(1,6))
-        print (ksk2)
-        print ("Kostka 3")
-        ksk3=(random.randint(1,6))
-        print (ksk3)
-        Zmena=input("Chcete nejakou kostku zamenit? Pokud ano napista 1,2,3 pokud ne 0")
-        if Zmena == ("1"):
-            ksk1=(random.randint(1,6))
-            print (ksk1)
-            
-        elif Zmena == ("2"):
-            ksk2=(random.randint(1,6))
-            print (ksk2)
-            
-        elif Zmena == ("3"):
-            ksk3=(random.randint(1,6))
-            print (ksk3)
-           
-        elif Zmena == ("0"): 
-            print("Ted hazi hrac 2")
-            print ("Kostka 1")
-            ksk4=(random.randint(1,6))
-            print (ksk4)
-            print ("Kostka 2")
-            ksk5=(random.randint(1,6))
-            print (ksk5)
-            print ("Kostka 3")
-            ksk6=(random.randint(1,6))
-            print (ksk6)
-            Zmena=input("Chcete nejakou kostku zamenit? Pokud ano napista 1,2,3 pokud ne 0")
-            if Zmena == ("1"):
-                ksk4=(random.randint(1,6))
-                print (ksk4)
-               
-            elif Zmena == ("2"):
-                ksk5=(random.randint(1,6))
-                print (ksk5)
+    Start = input("Vitej ve hre, zadej 'start' pro zacatek: ")
+    
+    if Start == "start":
+            while True:
+                print("Hrac 1 hazi")
+                ksk1 = random.randint(1, 6)
+                print("Kostka 1:", ksk1)
+                ksk2 = random.randint(1, 6)
+                print("Kostka 2:", ksk2)
+                ksk3 = random.randint(1, 6)
+                print("Kostka 3:", ksk3)
                 
-            elif Zmena == ("3"):
-                ksk6=(random.randint(1,6))
-                print (ksk6)
-               
-            elif Zmena == ("0"):
-                print("Konec")
-                KonecHr1 = (ksk1+ksk2+ksk3)
-                KonecHr2 = (ksk4+ksk5+ksk6)
-                if KonecHr1 > KonecHr2:
-                    print("Vyhrava hrac 1")
-                else:
-                    print("Vyhrava hrac 2")
+                while True:
+                    Zmena = input("Chcete nejakou kostku zamenit? Pokud ano, napis '1', '2', '3', pokud ne '0': ")
+                    
+                    if Zmena == "1":
+                        ksk1 = random.randint(1, 6)
+                        print("Kostka 1 byla prehozena na:", ksk1)
+                    elif Zmena == "2":
+                        ksk2 = random.randint(1, 6)
+                        print("Kostka 2 byla prehozena na:", ksk2)
+                    elif Zmena == "3":
+                        ksk3 = random.randint(1, 6)
+                        print("Kostka 3 byla prehozena na:", ksk3)
+                    elif Zmena == "0":
+                        print("Ted hazi hrac 2")
+                        ksk4 = random.randint(1, 6)
+                        print("Kostka 1:", ksk4)
+                        ksk5 = random.randint(1, 6)
+                        print("Kostka 1:", ksk4)
+                        ksk6 = random.randint(1, 6)
+                        print("Kostka 3:", ksk6)
+                        
+                        while True:
+                            Zmena = input("Chcete nejakou kostku zamenit? Pokud ano, napis '1', '2', '3', pokud ne '0': ")
+                            
+                            if Zmena == "1":
+                                ksk4 = random.randint(1, 6)
+                                print("Kostka 1 byla prehozena na:", ksk4)
+                            elif Zmena == "2":
+                                ksk5 = random.randint(1, 6)
+                                print("Kostka 2 byla prehozena na:", ksk5)
+                            elif Zmena == "3":
+                                ksk6 = random.randint(1, 6)
+                                print("Kostka 3 byla prehozena na:", ksk6)
+                            elif Zmena == "0":
+                                break
+                            
+                        KonecHr1 = ksk1 + ksk2 + ksk3
+                        KonecHr2 = ksk4 + ksk5 + ksk6
+                    
+                        print("Konec")
+                                    
+                        if KonecHr1 > KonecHr2:
+                            print("Vyhrava hrac 1")
+                        elif KonecHr1 < KonecHr2:
+                            print("Vyhrava hrac 2")
+                        else:
+                            print("Remiza")
+                            
+                        Start = "konec"
+                        
+    elif Start == "konec":
+        break
