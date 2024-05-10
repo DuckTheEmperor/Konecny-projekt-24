@@ -1,5 +1,6 @@
 import random
-
+body1 = 0
+body2 = 0
 while True:
     Start = input("Vitej ve hre, zadej 'start' pro zacatek: ")
     
@@ -7,12 +8,50 @@ while True:
             while True:
                 print("Hrac 1 hazi")
                 ksk1 = random.randint(1, 6)
+                if ksk1 == 1:
+                    body1 += 100
+                elif ksk1 == 2:
+                    body1 += 20
+                elif ksk1 == 3:
+                    body1 += 30
+                elif ksk1 == 4:
+                    body1 += 40
+                elif ksk1 == 5:
+                    body1 += 50
+                elif ksk1 == 6:
+                    body1 += 60
                 print("Kostka 1:", ksk1)
                 ksk2 = random.randint(1, 6)
+                if ksk2 == 1:
+                    body1 += 100
+                elif ksk2 == 2:
+                    body1 += 20
+                elif ksk2 == 3:
+                    body1 += 30
+                elif ksk2 == 4:
+                    body1 += 40
+                elif ksk2 == 5:
+                    body1 += 50
+                elif ksk2 == 6:
+                    body1 += 60
+                
                 print("Kostka 2:", ksk2)
                 ksk3 = random.randint(1, 6)
-                print("Kostka 3:", ksk3)
+                if ksk3 == 1:
+                    body1 += 100
+                elif ksk3 == 2:
+                    body1 += 20
+                elif ksk3 == 3:
+                    body1 += 30
+                elif ksk3 == 4:
+                    body1 += 40
+                elif ksk3 == 5:
+                    body1 += 50
+                elif ksk3 == 6:
+                    body1 += 60
                 
+                print("Kostka 3:", ksk3)
+        
                 while True:
                     Zmena = input("Chcete nejakou kostku zamenit? Pokud ano, napis '1', '2', '3', pokud ne '0': ")
                     
@@ -29,10 +68,48 @@ while True:
                         print("Ted hazi hrac 2")
                         ksk4 = random.randint(1, 6)
                         print("Kostka 1:", ksk4)
+                        if ksk4 == 1:
+                            body2 += 100
+                        elif ksk4 == 2:
+                            body2 += 20
+                        elif ksk4 == 3:
+                            body2 += 30
+                        elif ksk4 == 4:
+                            body2 += 40
+                        elif ksk4 == 5:
+                            body2 += 50
+                        elif ksk4 == 6:
+                            body2 += 60
+
                         ksk5 = random.randint(1, 6)
-                        print("Kostka 1:", ksk4)
+                        print("Kostka 1:", ksk5)
+                        if ksk5 == 1:
+                            body2 += 100
+                        elif ksk5 == 2:
+                            body2 += 20
+                        elif ksk5 == 3:
+                            body2 += 30
+                        elif ksk5 == 4:
+                            body2 += 40
+                        elif ksk5 == 5:
+                            body2 += 50
+                        elif ksk5 == 6:
+                            body2 += 60
+
                         ksk6 = random.randint(1, 6)
                         print("Kostka 3:", ksk6)
+                        if ksk6 == 1:
+                            body2 += 100
+                        elif ksk6 == 2:
+                            body2 += 20
+                        elif ksk6 == 3:
+                            body2 += 30
+                        elif ksk6 == 4:
+                            body2 += 40
+                        elif ksk6 == 5:
+                            body2 += 50
+                        elif ksk6 == 6:
+                            body2 += 60
                         
                         while True:
                             Zmena = input("Chcete nejakou kostku zamenit? Pokud ano, napis '1', '2', '3', pokud ne '0': ")
@@ -49,20 +126,17 @@ while True:
                             elif Zmena == "0":
                                 break
                             
-                        KonecHr1 = ksk1 + ksk2 + ksk3
-                        KonecHr2 = ksk4 + ksk5 + ksk6
                     
                         print("Konec")
                                     
-                        if KonecHr1 > KonecHr2:
+                        if body1 > body2:
                             print("Vyhrava hrac 1")
-                        elif KonecHr1 < KonecHr2:
+                        elif body1 < body2:
                             print("Vyhrava hrac 2")
                         else:
                             print("Remiza")
                         
                         Start = "konec"
-                        print(True)
                         break
                 if Start == "konec":
                         break
