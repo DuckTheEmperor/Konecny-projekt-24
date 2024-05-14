@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="ytbuttondm">
+      <a href="https://www.youtube.com"><button><img src="https://www.logo.wine/a/logo/YouTube/YouTube-White-Full-Color-Dark-Background-Logo.wine.svg"; width="200px"; height="110px" alt="buttonpng" /></button></a>
+         
+      </button>
+  </div>
   <div class="baner">
   <img src="https://i.ytimg.com/vi/j64oZLF443g/maxresdefault.jpg"; width="1200px"; height="350px";>
   </div>
@@ -218,6 +223,12 @@
       před 1 rokem
   </div>
   <style>
+    .ytbuttondm{
+      position: absolute;
+      top: 15px;
+      left: 35px;
+      border: none;
+    }
    .ntc{
       position: absolute;
       top: 1135px;
@@ -649,6 +660,8 @@ position: absolute;
 
     
   </section>
+
+
 
   
 
